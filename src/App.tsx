@@ -2,32 +2,32 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Sparkles, Calendar, Compass, PhoneCall, HelpCircle, Check, ArrowUpRight, CompassIcon } from 'lucide-react';
 
-// Imported Assets
-import simmaLuxurySuite from './assets/images/simma_luxury_suite_1782896830068.jpg';
-import simmaClassicDouble from './assets/images/simma_classic_double_room.jpg';
-import simmaAlpineTwin from './assets/images/simma_alpine_twin_room.jpg';
-import simmaClassicComfort from './assets/images/simma_classic_comfort_room.jpg';
-import simmaHotelHero from './assets/images/simma_hotel_hero_1782896818627.jpg';
-import simmaDarjeelingTwilight from './assets/images/simma_darjeeling_twilight_view.jpg';
-import simmaRestaurantBarEntrance from './assets/images/simma_restaurant_bar_entrance.jpg';
-import simmaTeaPour from './assets/images/simma_tea_pour_1782897189970.jpg';
-import simmaCozyLoungeBar from './assets/images/simma_cozy_lounge_bar.jpg';
-import simmaBarRestaurantEntrance from './assets/images/simma_bar_restaurant_entrance.jpg';
-import simmaAboutGarden from './assets/images/simma_about_garden_1782897032638.jpg';
-import simmaDarjeelingScenicRoad from './assets/images/simma_darjeeling_scenic_road_view.jpg';
-import simmaCozyMinimalistRoom from './assets/images/simma_cozy_minimalist_room.jpg';
-import simmaClassicCozyRoom from './assets/images/simma_classic_cozy_room.jpg';
-import simmaDarjeelingTownView from './assets/images/simma_darjeeling_town_view.jpg';
-import simmaFineDining from './assets/images/simma_fine_dining_1782896840611.jpg';
-import simmaLuxuryBar from './assets/images/simma_luxury_bar_1782896853497.jpg';
+// Image Assets (referencing static assets directly from the public/assets/images directory)
+const simmaLuxurySuite = '/assets/images/simma_luxury_suite_1782896830068.jpg';
+const simmaClassicDouble = '/assets/images/simma_classic_double_room.jpg';
+const simmaAlpineTwin = '/assets/images/simma_alpine_twin_room.jpg';
+const simmaClassicComfort = '/assets/images/simma_classic_comfort_room.jpg';
+const simmaHotelHero = '/assets/images/simma_hotel_hero_1782896818627.jpg';
+const simmaDarjeelingTwilight = '/assets/images/simma_darjeeling_twilight_view.jpg';
+const simmaRestaurantBarEntrance = '/assets/images/simma_restaurant_bar_entrance.jpg';
+const simmaTeaPour = '/assets/images/simma_tea_pour_1782897189970.jpg';
+const simmaCozyLoungeBar = '/assets/images/simma_cozy_lounge_bar.jpg';
+const simmaBarRestaurantEntrance = '/assets/images/simma_bar_restaurant_entrance.jpg';
+const simmaAboutGarden = '/assets/images/simma_about_garden_1782897032638.jpg';
+const simmaDarjeelingScenicRoad = '/assets/images/simma_darjeeling_scenic_road_view.jpg';
+const simmaCozyMinimalistRoom = '/assets/images/simma_cozy_minimalist_room.jpg';
+const simmaClassicCozyRoom = '/assets/images/simma_classic_cozy_room.jpg';
+const simmaDarjeelingTownView = '/assets/images/simma_darjeeling_town_view.jpg';
+const simmaFineDining = '/assets/images/simma_fine_dining_1782896840611.jpg';
+const simmaLuxuryBar = '/assets/images/simma_luxury_bar_1782896853497.jpg';
 
 // Additional Uploaded Local Assets
-import simmaRoomValley from './assets/images/simma_room_valley_1782897067469.jpg';
-import simmaRoomVilla from './assets/images/simma_room_villa_1782897080882.jpg';
-import simmaCozyTwinSanctuary from './assets/images/simma_cozy_twin_sanctuary.jpg';
-import simmaCozyDoubleRoom from './assets/images/simma_cozy_double_room.jpg';
-import simmaCozyTwinRoom from './assets/images/simma_cozy_twin_room.jpg';
-import simmaClassicTwinRoom from './assets/images/simma_classic_twin_room.jpg';
+const simmaRoomValley = '/assets/images/simma_room_valley_1782897067469.jpg';
+const simmaRoomVilla = '/assets/images/simma_room_villa_1782897080882.jpg';
+const simmaCozyTwinSanctuary = '/assets/images/simma_cozy_twin_sanctuary.jpg';
+const simmaCozyDoubleRoom = '/assets/images/simma_cozy_double_room.jpg';
+const simmaCozyTwinRoom = '/assets/images/simma_cozy_twin_room.jpg';
+const simmaClassicTwinRoom = '/assets/images/simma_classic_twin_room.jpg';
 
 // Components
 import CustomCursor from './components/CustomCursor';
@@ -49,6 +49,12 @@ import MyReservationsDrawer from './components/MyReservationsDrawer';
 
 // Types
 import { Room, Testimonial, GalleryImage } from './types';
+
+// Helper to append a cache-buster query parameter to force browser cache bypass for freshly copied image assets
+const buster = (() => {
+  const sessionToken = 'final_reupload_' + Date.now();
+  return (url: string) => url ? `${url}?v=${sessionToken}` : url;
+})();
 
 export default function App() {
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
@@ -84,7 +90,7 @@ export default function App() {
       description: 'Our crown jewel. Features a vintage roaring slate-stone fireplace, a private panoramic cedar deck, and an artisan hand-beaten copper bathtub.',
       longDescription: 'Directly facing the sunrise summit of Mount Kanchenjunga. The Imperial Suite is designed for deep premium luxury. Furnished with handpicked antiques, a massive stone-masonry hearth, and an expansive bedroom that opens onto a suspended wooden deck. Enjoy private butler tea services served beside the crackling fire.',
       price: 320,
-      image: simmaLuxurySuite,
+      image: buster(simmaLuxurySuite),
       size: '780 SQ FT',
       occupancy: '2 ADULTS',
       bed: 'EMPEROR LUX BED',
@@ -104,7 +110,7 @@ export default function App() {
       description: 'A cozy and welcoming double bed featuring vibrant red accents, designed to provide a restful retreat after a day of exploring Darjeeling.',
       longDescription: 'A classic and thoughtfully appointed double room that blends traditional mountain design with quiet comfort. Features warm timber accents, handcrafted furniture, and rich crimson draperies that cocoon you in comfort. The room opens to views of our misty tea valleys and is stocked with our private organic first-flush selection.',
       price: 150,
-      image: simmaClassicDouble,
+      image: buster(simmaClassicDouble),
       size: '420 SQ FT',
       occupancy: '2 ADULTS',
       bed: '1 QUEEN BED',
@@ -123,7 +129,7 @@ export default function App() {
       description: 'Warm wooden paneling and vibrant crimson accents create a cozy, inviting twin room, bathed in soft daylight.',
       longDescription: 'Perfect for friends or family traveling together, our Alpine Twin Sanctuary features two premium single beds adorned with high-thread-count linens and warm scarlet textiles. Bathed in the soft alpine daylight of Darjeeling, this room is a peaceful retreat offering stunning garden and pathway vistas.',
       price: 165,
-      image: simmaAlpineTwin,
+      image: buster(simmaAlpineTwin),
       size: '450 SQ FT',
       occupancy: '2 GUESTS',
       bed: '2 SINGLE BEDS',
@@ -142,7 +148,7 @@ export default function App() {
       description: 'Thoughtfully curated for cozy intimacy, our guest room combines vibrant local accents with tranquil woodland views framed by classic panel windows.',
       longDescription: 'Envelop yourself in pure rustic serenity. The Classic Comfort Room is designed with local cedar paneling and gorgeous hand-embroidered textiles. Large paneled windows frame peaceful woodland and garden approach views, allowing you to watch the sunset colors paint the forest canopy while relaxing with a warm cup of Darjeeling tea.',
       price: 140,
-      image: simmaClassicComfort,
+      image: buster(simmaClassicComfort),
       size: '390 SQ FT',
       occupancy: '2 ADULTS',
       bed: '1 QUEEN BED',
@@ -189,7 +195,7 @@ export default function App() {
   ];
 
   // Gallery images mapping (utilizing merged real photographs and gorgeous custom-generated images!)
-  const galleryImages: GalleryImage[] = [
+  const galleryRaw: GalleryImage[] = [
     {
       id: 'g-1',
       url: simmaHotelHero,
@@ -311,6 +317,7 @@ export default function App() {
       category: 'rooms',
     },
   ];
+  const galleryImages: GalleryImage[] = galleryRaw.map(img => ({ ...img, url: buster(img.url) }));
 
   const handleOpenBooking = (room: Room | null = null) => {
     setSelectedRoom(room);
@@ -371,11 +378,11 @@ export default function App() {
       <Hero
         onOpenBooking={() => handleOpenBooking(null)}
         onOpenDining={handleOpenDining}
-        heroImage={simmaHotelHero}
+        heroImage={buster(simmaHotelHero)}
       />
 
       {/* Heritage Split About Section */}
-      <About aboutImage={simmaAboutGarden} />
+      <About aboutImage={buster(simmaAboutGarden)} />
 
       {/* Interactive Rooms Section */}
       <Rooms
@@ -386,13 +393,13 @@ export default function App() {
       {/* Edge Restaurant Menu Section */}
       <Restaurant
         onReserveTable={handleOpenDining}
-        restaurantImage={simmaFineDining}
+        restaurantImage={buster(simmaFineDining)}
       />
 
       {/* Cozy Twilight Bar Section */}
       <Bar
         onReserveTable={handleOpenDining}
-        barImage={simmaLuxuryBar}
+        barImage={buster(simmaLuxuryBar)}
       />
 
       {/* Premium Service Amenities Grid */}
