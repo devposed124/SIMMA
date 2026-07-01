@@ -21,6 +21,14 @@ import simmaDarjeelingTownView from './assets/images/simma_darjeeling_town_view.
 import simmaFineDining from './assets/images/simma_fine_dining_1782896840611.jpg';
 import simmaLuxuryBar from './assets/images/simma_luxury_bar_1782896853497.jpg';
 
+// Additional Uploaded Local Assets
+import simmaRoomValley from './assets/images/simma_room_valley_1782897067469.jpg';
+import simmaRoomVilla from './assets/images/simma_room_villa_1782897080882.jpg';
+import simmaCozyTwinSanctuary from './assets/images/simma_cozy_twin_sanctuary.jpg';
+import simmaCozyDoubleRoom from './assets/images/simma_cozy_double_room.jpg';
+import simmaCozyTwinRoom from './assets/images/simma_cozy_twin_room.jpg';
+import simmaClassicTwinRoom from './assets/images/simma_classic_twin_room.jpg';
+
 // Components
 import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
@@ -265,6 +273,42 @@ export default function App() {
       url: simmaDarjeelingTownView,
       caption: "Experience the authentic mountain town charm of Darjeeling's hillside steps just moments away",
       category: 'views',
+    },
+    {
+      id: 'g-15',
+      url: simmaRoomValley,
+      caption: 'Spectacular valley view sanctuary overlooking misty tea gardens',
+      category: 'rooms',
+    },
+    {
+      id: 'g-16',
+      url: simmaRoomVilla,
+      caption: 'Luxury private villa bedroom with pristine pine framing',
+      category: 'rooms',
+    },
+    {
+      id: 'g-17',
+      url: simmaCozyTwinSanctuary,
+      caption: 'Elegant twin sanctuary adorned with traditional crimson patterns',
+      category: 'rooms',
+    },
+    {
+      id: 'g-18',
+      url: simmaCozyDoubleRoom,
+      caption: 'Cozy retreat room with handcrafted local wood detailing',
+      category: 'rooms',
+    },
+    {
+      id: 'g-19',
+      url: simmaCozyTwinRoom,
+      caption: 'Serene twin configuration designed for deep alpine comfort',
+      category: 'rooms',
+    },
+    {
+      id: 'g-20',
+      url: simmaClassicTwinRoom,
+      caption: 'Heritage twin layout showcasing bespoke Himalayan textiles',
+      category: 'rooms',
     },
   ];
 
