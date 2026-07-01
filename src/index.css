@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  
+  --color-charcoal: #0F1115;
+  --color-graphite: #181B20;
+  --color-card-bg: #20242B;
+  --color-primary-text: #F7F6F2;
+  --color-secondary-text: #B6BCC5;
+  --color-gold: #C9A24A;
+  --color-amber: #E8B35A;
+  --color-forest: #355A45;
+  --color-gold-hover: #D8B96A;
+  --color-border-custom: rgba(255, 255, 255, 0.08);
+}
+
+/* Custom styles for luxury hotel elements */
+html {
+  scroll-behavior: smooth;
+  background-color: #0F1115;
+  color: #F7F6F2;
+}
+
+body {
+  font-family: var(--font-sans);
+  cursor: none; /* Hide default cursor to enable custom luxurious cursor */
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0F1115;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A24A;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D8B96A;
+}
+
+/* Hide cursor on mobile devices */
+@media (max-width: 1024px) {
+  body {
+    cursor: auto !important;
+  }
+}

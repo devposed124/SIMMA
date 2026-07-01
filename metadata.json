@@ -1,0 +1,6 @@
+{
+  "name": "Simma Hotel",
+  "description": "Premium luxury hospitality website for Simma Hotel, Restaurant, and Bar in Darjeeling, India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
