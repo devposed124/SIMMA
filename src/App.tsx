@@ -2,6 +2,25 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Sparkles, Calendar, Compass, PhoneCall, HelpCircle, Check, ArrowUpRight, CompassIcon } from 'lucide-react';
 
+// Imported Assets
+import simmaLuxurySuite from './assets/images/simma_luxury_suite_1782896830068.jpg';
+import simmaClassicDouble from './assets/images/simma_classic_double_room.jpg';
+import simmaAlpineTwin from './assets/images/simma_alpine_twin_room.jpg';
+import simmaClassicComfort from './assets/images/simma_classic_comfort_room.jpg';
+import simmaHotelHero from './assets/images/simma_hotel_hero_1782896818627.jpg';
+import simmaDarjeelingTwilight from './assets/images/simma_darjeeling_twilight_view.jpg';
+import simmaRestaurantBarEntrance from './assets/images/simma_restaurant_bar_entrance.jpg';
+import simmaTeaPour from './assets/images/simma_tea_pour_1782897189970.jpg';
+import simmaCozyLoungeBar from './assets/images/simma_cozy_lounge_bar.jpg';
+import simmaBarRestaurantEntrance from './assets/images/simma_bar_restaurant_entrance.jpg';
+import simmaAboutGarden from './assets/images/simma_about_garden_1782897032638.jpg';
+import simmaDarjeelingScenicRoad from './assets/images/simma_darjeeling_scenic_road_view.jpg';
+import simmaCozyMinimalistRoom from './assets/images/simma_cozy_minimalist_room.jpg';
+import simmaClassicCozyRoom from './assets/images/simma_classic_cozy_room.jpg';
+import simmaDarjeelingTownView from './assets/images/simma_darjeeling_town_view.jpg';
+import simmaFineDining from './assets/images/simma_fine_dining_1782896840611.jpg';
+import simmaLuxuryBar from './assets/images/simma_luxury_bar_1782896853497.jpg';
+
 // Components
 import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
@@ -57,7 +76,7 @@ export default function App() {
       description: 'Our crown jewel. Features a vintage roaring slate-stone fireplace, a private panoramic cedar deck, and an artisan hand-beaten copper bathtub.',
       longDescription: 'Directly facing the sunrise summit of Mount Kanchenjunga. The Imperial Suite is designed for deep premium luxury. Furnished with handpicked antiques, a massive stone-masonry hearth, and an expansive bedroom that opens onto a suspended wooden deck. Enjoy private butler tea services served beside the crackling fire.',
       price: 320,
-      image: '/assets/images/simma_luxury_suite_1782896830068.jpg',
+      image: simmaLuxurySuite,
       size: '780 SQ FT',
       occupancy: '2 ADULTS',
       bed: 'EMPEROR LUX BED',
@@ -77,7 +96,7 @@ export default function App() {
       description: 'A cozy and welcoming double bed featuring vibrant red accents, designed to provide a restful retreat after a day of exploring Darjeeling.',
       longDescription: 'A classic and thoughtfully appointed double room that blends traditional mountain design with quiet comfort. Features warm timber accents, handcrafted furniture, and rich crimson draperies that cocoon you in comfort. The room opens to views of our misty tea valleys and is stocked with our private organic first-flush selection.',
       price: 150,
-      image: '/assets/images/simma_classic_double_room.jpg',
+      image: simmaClassicDouble,
       size: '420 SQ FT',
       occupancy: '2 ADULTS',
       bed: '1 QUEEN BED',
@@ -96,7 +115,7 @@ export default function App() {
       description: 'Warm wooden paneling and vibrant crimson accents create a cozy, inviting twin room, bathed in soft daylight.',
       longDescription: 'Perfect for friends or family traveling together, our Alpine Twin Sanctuary features two premium single beds adorned with high-thread-count linens and warm scarlet textiles. Bathed in the soft alpine daylight of Darjeeling, this room is a peaceful retreat offering stunning garden and pathway vistas.',
       price: 165,
-      image: '/assets/images/simma_alpine_twin_room.jpg',
+      image: simmaAlpineTwin,
       size: '450 SQ FT',
       occupancy: '2 GUESTS',
       bed: '2 SINGLE BEDS',
@@ -115,7 +134,7 @@ export default function App() {
       description: 'Thoughtfully curated for cozy intimacy, our guest room combines vibrant local accents with tranquil woodland views framed by classic panel windows.',
       longDescription: 'Envelop yourself in pure rustic serenity. The Classic Comfort Room is designed with local cedar paneling and gorgeous hand-embroidered textiles. Large paneled windows frame peaceful woodland and garden approach views, allowing you to watch the sunset colors paint the forest canopy while relaxing with a warm cup of Darjeeling tea.',
       price: 140,
-      image: '/assets/images/simma_classic_comfort_room.jpg',
+      image: simmaClassicComfort,
       size: '390 SQ FT',
       occupancy: '2 ADULTS',
       bed: '1 QUEEN BED',
@@ -165,85 +184,85 @@ export default function App() {
   const galleryImages: GalleryImage[] = [
     {
       id: 'g-1',
-      url: '/assets/images/simma_hotel_hero_1782896818627.jpg',
+      url: simmaHotelHero,
       caption: 'The main resort exterior fading into twilight valleys',
       category: 'views',
     },
     {
       id: 'g-2',
-      url: '/assets/images/simma_darjeeling_twilight_view.jpg',
+      url: simmaDarjeelingTwilight,
       caption: 'A serene blue-hour vista over the twinkling hillside of Darjeeling, captured from the comforting luxury of SIMMA',
       category: 'views',
     },
     {
       id: 'g-3',
-      url: '/assets/images/simma_luxury_suite_1782896830068.jpg',
+      url: simmaLuxurySuite,
       caption: 'Fireplace comfort inside the Simma Imperial Suite',
       category: 'rooms',
     },
     {
       id: 'g-4',
-      url: '/assets/images/simma_classic_double_room.jpg',
+      url: simmaClassicDouble,
       caption: 'A cozy and welcoming double bed featuring vibrant red accents, designed to provide a restful retreat',
       category: 'rooms',
     },
     {
       id: 'g-5',
-      url: '/assets/images/simma_restaurant_bar_entrance.jpg',
+      url: simmaRestaurantBarEntrance,
       caption: "An inviting threshold to culinary indulgence at Simma's signature Restaurant & Bar",
       category: 'dining',
     },
     {
       id: 'g-6',
-      url: '/assets/images/simma_tea_pour_1782897189970.jpg',
+      url: simmaTeaPour,
       caption: 'Traditional organic Darjeeling first-flush pour ceremony',
       category: 'dining',
     },
     {
       id: 'g-7',
-      url: '/assets/images/simma_cozy_lounge_bar.jpg',
+      url: simmaCozyLoungeBar,
       caption: 'Unwind at our intimate rustic-chic bar, where warm, artisanal lighting and curated spirits await',
       category: 'bar',
     },
     {
       id: 'g-8',
-      url: '/assets/images/simma_bar_restaurant_entrance.jpg',
+      url: simmaBarRestaurantEntrance,
       caption: 'The vibrant street-level facade of Simma, featuring our classic traditional tavern entrance',
       category: 'bar',
     },
     {
       id: 'g-9',
-      url: '/assets/images/simma_about_garden_1782897032638.jpg',
+      url: simmaAboutGarden,
       caption: 'Boutique resort tea gardens catching afternoon light',
       category: 'views',
     },
     {
       id: 'g-10',
-      url: '/assets/images/simma_darjeeling_scenic_road_view.jpg',
+      url: simmaDarjeelingScenicRoad,
       caption: "Winding mountain roads and towering pine forests framing the tranquil approach to SIMMA",
       category: 'views',
     },
     {
       id: 'g-11',
-      url: '/assets/images/simma_classic_comfort_room.jpg',
+      url: simmaClassicComfort,
       caption: 'Thoughtfully curated guest room combining vibrant local accents with tranquil garden views',
       category: 'rooms',
     },
     {
       id: 'g-12',
-      url: '/assets/images/simma_cozy_minimalist_room.jpg',
+      url: simmaCozyMinimalistRoom,
       caption: 'A beautifully minimalist retreat featuring warm crimson accents and classic wooden furnishings',
       category: 'rooms',
     },
     {
       id: 'g-13',
-      url: '/assets/images/simma_classic_cozy_room.jpg',
+      url: simmaClassicCozyRoom,
       caption: 'Warm wood paneling and vibrant accent linens create an intimate sanctuary for restful mountain nights',
       category: 'rooms',
     },
     {
       id: 'g-14',
-      url: '/assets/images/simma_darjeeling_town_view.jpg',
+      url: simmaDarjeelingTownView,
       caption: "Experience the authentic mountain town charm of Darjeeling's hillside steps just moments away",
       category: 'views',
     },
@@ -308,11 +327,11 @@ export default function App() {
       <Hero
         onOpenBooking={() => handleOpenBooking(null)}
         onOpenDining={handleOpenDining}
-        heroImage="/assets/images/simma_hotel_hero_1782896818627.jpg"
+        heroImage={simmaHotelHero}
       />
 
       {/* Heritage Split About Section */}
-      <About aboutImage="/assets/images/simma_about_garden_1782897032638.jpg" />
+      <About aboutImage={simmaAboutGarden} />
 
       {/* Interactive Rooms Section */}
       <Rooms
@@ -323,13 +342,13 @@ export default function App() {
       {/* Edge Restaurant Menu Section */}
       <Restaurant
         onReserveTable={handleOpenDining}
-        restaurantImage="/assets/images/simma_fine_dining_1782896840611.jpg"
+        restaurantImage={simmaFineDining}
       />
 
       {/* Cozy Twilight Bar Section */}
       <Bar
         onReserveTable={handleOpenDining}
-        barImage="/assets/images/simma_luxury_bar_1782896853497.jpg"
+        barImage={simmaLuxuryBar}
       />
 
       {/* Premium Service Amenities Grid */}
